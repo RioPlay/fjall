@@ -41,3 +41,13 @@ rand = "0.10.0"
 
 [package.metadata.cargo-all-features]
 denylist = ["__internal_whitebox"]
+
+# Reference microbenchmarks for the PR #301 hot-path changes (not part of the PR).
+# Dependency-free; each provides its own main via harness = false.
+[[bench]]
+name = "hotpath_micro"
+harness = false
+
+[[bench]]
+name = "batch_throughput"
+harness = false
